@@ -7,15 +7,8 @@ from utils import Media, get_file_details
 from pyrogram.errors import UserNotParticipant
 logger = logging.getLogger(__name__)
 
-PHOTO = ["https://telegra.ph/file/82c3c4ab3e50b9f04fe0e.jpg",
-         "https://telegra.ph/file/e59fafff4c958d8be0ef0.jpg",
-         "https://telegra.ph/file/0a703d135b93d12c2a91f.jpg",
-         "https://telegra.ph/file/a07e2db286d7a5d5af1d4.jpg",
-         "https://telegra.ph/file/3b75561bd891cf9421b26.jpg",
-         "https://telegra.ph/file/67f4f2855d614761e7237.jpg",
-         "https://telegra.ph/file/0ae92ec2d4bfa7330f53f.jpg",
          
-]
+
 
 @Client.on_message(filters.command("start"))
 async def start(bot, cmd):
@@ -103,32 +96,51 @@ async def start(bot, cmd):
                 ]
             )
         )
-    else:
-        await cmd.reply_text(
-            START_MSG,
-            parse_mode="Markdown",
-            disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton("our movie group🤩", url="https://t.me/FC_movie_land"),
-                    
-                        InlineKeyboardButton("🎬new release channel🎬", url="https://t.me/ott_releases_only"),
-                    ],[
-                        InlineKeyboardButton("OTT/DVD updates🥳", url="https://t.me/flix_updates")
-                    
-                    ],
-                    [
-                               
-                   
-                   
-                  
-                        InlineKeyboardButton("About", callback_data="about")
-                    ]
-                ]
-            )
-        )
+         else:
 
+        await cmd.reply_photo(
+
+            photo="https://telegra.ph/file/a07e2db286d7a5d5af1d4.jpg",
+
+            caption=START_MSG,
+
+            reply_markup=InlineKeyboardMarkup(
+
+                [
+
+                    [
+
+                        InlineKeyboardButton("➕️Add Me To Your Chats ➕️", url="https://t.me/cinegraamam_filterbot?startgroup=botstart")
+
+                    ],
+
+                    [
+
+                        InlineKeyboardButton("♻️ ⒼⓇⓄⓊⓅ ♻️", url="https://t.me/Fc_Movie_Land"),
+
+                        InlineKeyboardButton("⭕️ OTT UPDATES ⭕️", url="https://t.me/Flix_updates")
+
+                    ],
+
+                    [
+
+                        InlineKeyboardButton("♻️ Channels ♻️", url="https://t.me/FC_Linkz"),
+
+                        InlineKeyboardButton("🔥 Dev 🔥", url="https://t.me/itzz_me_17")
+
+                    ],
+
+                    [
+
+                        InlineKeyboardButton("𝙰𝚋𝚘𝚞𝚝 🚩", callback_data="about")
+
+                    ]
+
+                ]
+
+            )
+
+        )
 
 @Client.on_message(filters.command('channel') & filters.user(ADMINS))
 async def channel_info(bot, message):
