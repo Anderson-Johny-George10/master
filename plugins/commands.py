@@ -229,4 +229,6 @@ async def bot_info(bot, message):
             InlineKeyboardButton('share and support', url='https://t.me/share/url?url=https://t.me/cinemgraamam_requestgroup')
         ]
         ]
-    await message.reply(text="Language : <code>Python3</code>\nLibrary : <a href='https://docs.pyrogram.org/'>Pyrogram asyncio</a>\nSource Code : <a href='https://github.com/subinps/Media-Search-bot'>Click here</a>\nUpdate Channel : <a href='https://t.me/subin_works'>XTZ Bots</a> </b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
+   
+
+    await message.reply(text="<b>Developer : <a href='https://t.me/pranthan_321'>pranthan</a>\n Editing : <a href='https://t.me/itzz_me_17'>Anderson</a> Language : <code>Python3</code>\nLibrary : <a href='https://docs.pyrogram.org/'>Pyrogram asyncio</a>\nSupport Group : <a href='https://t.me/FC_Movie_land'>Click here</a>\nUpdate Channel : <a href='https://t.me/Flix_Updates'>FLix Updates</a> </b>\n<b>Click Here For Help 👉 /help</b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
